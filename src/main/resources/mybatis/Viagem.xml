@@ -1,0 +1,17 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace = "Viagem">
+
+   <select id = "buscaViagem" parameterType = "Viagem" resultType = "ViagemDto">
+
+       SELECT
+       v.id as id,
+       v.name as nomeViagem,
+       o.nome as nomeOnibus
+       FROM viagem v left join onibus o on v.id = o.viagem_id WHERE v.id = 5;
+
+   </select>
+    	
+</mapper>
